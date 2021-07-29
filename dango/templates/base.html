@@ -1,0 +1,61 @@
+{% load i18n cms_tags menu_tags sekizai_tags static %}
+{% load i18n  menu_tags sekizai_tags static %}
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <title>{% block title %}Full Stack Radio{% endblock title %}</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <meta name="Description"
+    content="{% block meta_description %} A podcast for developers interested in building great software products. Hosted by Adam Wathan. {% endblock meta_description %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://fullstackradio.com/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://fullstackradio.com/favicon-16x16.png">
+
+  {% render_block "css" %}
+  <link rel="preload" href="{% static 'theme/styles.css' %}" as="style"
+    onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="{% static 'theme/styles.css' %}" />
+  </noscript>
+</head>
+
+
+{% cms_toolbar %}
+<body>
+  <div class="bg-white pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+    <div class="relative max-w-2xl mx-auto">
+      <div class="flex flex-col items-center space-y-8 sm:items-start sm:space-y-0 sm:flex-row sm:space-x-8">
+        <a class="flex-shrink-0" href="/"><span class="sr-only">Home</span><img width="144" height="144"
+            class="h-28 w-28 sm:h-36 sm:w-36 rounded-lg object-cover"
+            src="https://fullstackradio.com/podcast-cover.jpg?width=144" alt="" /></a>
+        <div class="text-center sm:text-left">
+          <h1 class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
+            <a href="/">Full Stack Radio</a>
+          </h1>
+          <div class="mt-2">
+            <p class="text-xl leading-7 text-gray-500">
+              {% trans  "A podcast for developers interested in building great software products. Hosted by" %}
+              <a href="https://twitter.com/adamwathan">Adam Wathan</a>.
+            </p>
+          </div>
+          <div class="mt-4 flex justify-center space-x-2 text-gray-400 sm:justify-start">
+            <a class="text-gray-600 hover:text-gray-900"
+              href="https://podcasts.apple.com/us/podcast/feed/id931714873">Apple Podcasts</a><span>•</span><a
+              class="text-gray-600 hover:text-gray-900"
+              href="https://overcast.fm/itunes931714873">Overcast</a><span>•</span><a
+              class="text-gray-600 hover:text-gray-900" href="https://feeds.transistor.fm/full-stack-radio">RSS</a>
+          </div>
+        </div>
+      </div>
+      {% static_placeholder 'header' %}
+
+      <div>{% block content %} {% endblock content %}</div>
+    </div>
+  </div>
+  {% render_block "js" %}
+  <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
+</body>
+
+</html>

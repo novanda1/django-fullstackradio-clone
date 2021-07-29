@@ -1,0 +1,24 @@
+version: '3'
+services:
+  db:
+    image: postgres:9.6-alpine
+    volumes:
+      - postgresdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: dango
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+  app:
+    build: .
+    ports:
+      - "9090:8000"
+    volumes:
+      - ./:/app
+    depends_on:
+      - db
+    environment:
+      DEBUG: 1
+      DEBUG_TOOLBAR: 1
+      DATABASE_URL: postgres://postgres:secret@db:5432/dango
+volumes:
+  postgresdata:

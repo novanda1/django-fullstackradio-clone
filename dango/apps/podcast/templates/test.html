@@ -1,0 +1,29 @@
+{% load i18n %}
+
+{{ url  }}
+<form action="{% url "test" %}" method="post">{% csrf_token %}
+     <select name="language">
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+        {% for language in languages %}
+          <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+              {{ language.name_local }} ({{ language.code }})
+          </option>
+        {% endfor %}
+     </select>
+     <input type="submit" value="Go">
+ </form>
+
+
+{% get_available_languages as LANGUAGES %}
+{{LANGUAGES}}
+{% get_current_language as LANGUAGE_CODE %}
+Current language: {{ LANGUAGE_CODE }}
+<p>{% translate "Welcome to our page" %}</p>
+
+{% language 'id' %}
+    {% get_current_language as LANGUAGE_CODE %}
+     Current language: {{ LANGUAGE_CODE }} 
+    <p>{% translate "Welcome to our page" %}</p>
+{% endlanguage %}

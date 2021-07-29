@@ -1,0 +1,54 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-28 15:04+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: dango/apps/podcast/templates/index.html:20
+msgid "Show notes"
+msgstr "Tampilkan catatan"
+
+#: dango/apps/podcast/templates/test.html:23
+#: dango/apps/podcast/templates/test.html:28
+msgid "Welcome to our page"
+msgstr ""
+
+#: dango/apps/podcast/views.py:21
+msgid "i want to say ok"
+msgstr "aku mau bilang oke nih"
+
+#: dango/apps/podcast_cms_integration/cms_plugins.py:10
+msgid "Podcast"
+msgstr ""
+
+#: dango/apps/podcast_cms_integration/cms_plugins.py:11
+msgid "Podcast Plugin"
+msgstr ""
+
+#: dango/settings.py:73 dango/settings.py:99 dango/settings.py:108
+msgid "Bahasa Indonesia"
+msgstr ""
+
+#: dango/settings.py:74 dango/settings.py:92 dango/settings.py:115
+msgid "English"
+msgstr ""
+
+#: dango/templates/base.html:37
+msgid ""
+"A podcast for developers interested in building great software products. "
+"Hosted by"
+msgstr "Podcast untuk pengembang yang tertarik untuk membangun produk perangkat lunak yang hebat. Tuan rumahnya adalah "
