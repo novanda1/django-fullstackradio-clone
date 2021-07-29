@@ -8,7 +8,7 @@ object.excerpt }}{% endblock meta_description %} {% endif %} {% block content %}
   <div class="border-t-2 border-gray-100 pt-8">
     <div>
       <p class="text-sm leading-5 text-gray-500">
-        <time datetime="2021-1-28">{{object.created | date}}</time>
+        {% block trans %} <time datetime="2021-1-28">{{  object.created | date}}</time>{% endblock %}
       </p>
       <div>
         <h2 class="mt-2 text-xl leading-7 font-semibold text-gray-900">

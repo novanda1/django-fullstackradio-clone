@@ -5,7 +5,8 @@
 <div class="mt-6 grid gap-12 border-t-2 border-gray-100 py-8">
     {% for episode in episode_list %}
     <div class="relative">
-        <p class="text-sm leading-5 text-gray-500"><time datetime="2021-1-28">{{episode.created | date:"M d, Y"}}</time>
+        <p class="text-sm leading-5 text-gray-500">
+            {% block trans %}<time datetime="2021-1-28">{{episode.created | date}}</time>{% endblock %}
         </p>
         <div>
             <h2 class="mt-2 text-xl leading-7 font-semibold text-gray-900">
