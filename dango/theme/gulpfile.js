@@ -33,7 +33,7 @@ const _styles = (cb) => {
 	cb()
 }
 
-const clean = (cb) => {
+const _clean = (cb) => {
 	rimraf('./static', cb);
 }
 
@@ -42,6 +42,6 @@ const _watch = (cb) => {
 	cb()
 }
 
-exports.default = series(_styles, _watch)
-exports.build = parallel(_styles)
+exports.default = series(_clean, _styles, _watch)
+exports.build = series(_clean, parallel(_styles))
 
