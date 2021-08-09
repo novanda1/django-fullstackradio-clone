@@ -10,7 +10,7 @@ def search(request):
 
     context = {
         "result": podcast,
-        "text": 'oke broh'
+        "current_q": query
     }
     template_name = "msearch/result.html"
 
