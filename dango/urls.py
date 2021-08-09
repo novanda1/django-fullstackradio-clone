@@ -28,6 +28,8 @@ urlpatterns.extend(i18n_patterns(
     re_path("admin/", admin.site.urls),
     re_path(r'^cms_login/$', views.login, name='cms_login'),
     re_path(r'^cms_wizard/', include('cms.wizards.urls')),
+    re_path(r'^search/', include(('dango.apps.msearch.urls', 'search'),
+            namespace="search"), name="search"),
     re_path(r'^podcast/', include(
         ('dango.apps.podcast.urls', 'podcast'),
         namespace="podcast"), name="podcast"),
