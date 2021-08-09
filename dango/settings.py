@@ -239,6 +239,7 @@ INSTALLED_APPS = [
     # deps
     'ckeditor',
     'ckeditor_uploader',
+    'django_elasticsearch_dsl'
 ]
 
 
@@ -276,3 +277,9 @@ THUMBNAIL_PROCESSORS = (
 
 CKEDITOR_BASEPATH = os.path.join(STATIC_URL, 'ckeditor/ckeditor/')
 CKEDITOR_UPLOAD_PATH = "uploads/"
+
+ELASTICSEARCH_DSL={
+    'default': {
+        'hosts': 'es:9200'
+    },
+}
