@@ -235,6 +235,7 @@ INSTALLED_APPS = [
     'dango.apps.podcast',
     'dango.apps.podcast_cms_integration',
     'dango.theme',
+    'dango.apps.msearch',
 
     # deps
     'ckeditor',
